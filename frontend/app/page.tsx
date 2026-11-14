@@ -60,26 +60,6 @@ export default async function Home() {
               className="block h-auto w-full"
             />
           </div>
-          <div className="flex justify-center bg-[#1b2820] px-3 py-4 sm:px-6 sm:py-6">
-            <div className="flex w-full max-w-lg flex-wrap items-center justify-center gap-2.5 rounded-2xl border border-white/20 bg-black/40 p-2 backdrop-blur-md sm:gap-3 sm:p-2.5">
-              <a
-                href="tel:+966539954915"
-                className="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-full bg-[#1b2e23] border border-white/25 px-5 text-xs font-black text-white shadow-md transition hover:bg-white hover:text-[#1b2e23] sm:min-h-12 sm:text-sm"
-              >
-                <Phone size={16} className="text-[#d49b53]" />
-                <span dir="ltr">053 995 4915</span>
-              </a>
-              <a
-                href="https://wa.me/966539954915"
-                target="_blank"
-                rel="noreferrer"
-                className="inline-flex min-h-11 flex-1 items-center justify-center gap-2 rounded-full bg-[#25D366] px-5 text-xs font-black text-white shadow-md transition hover:bg-[#20ba5a] sm:min-h-12 sm:text-sm"
-              >
-                <MessageCircle size={17} />
-                <span>محادثة واتساب</span>
-              </a>
-            </div>
-          </div>
         </section>
 
         <section className="bg-[#1b2e23] py-16 text-[#f8f6f0] sm:py-20">
