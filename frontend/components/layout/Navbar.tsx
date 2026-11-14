@@ -28,7 +28,7 @@ export default function Navbar({ overlay = false }: { overlay?: boolean }) {
         </div>
         <div className="hidden items-center gap-2.5 xl:flex">
           <a href="tel:+966539954915" className="inline-flex items-center gap-1.5 rounded-full border border-white/20 bg-black/20 px-3.5 py-2 text-xs font-bold text-white transition hover:bg-white hover:text-[#1b2e23]">
-            <Phone size={13} className="text-[#d49b53]" /> <span dir="ltr">053 995 4915</span>
+            <Phone size={13} className="text-[#d49b53]" /> <span>اتصال مباشر</span>
           </a>
           <a href="https://wa.me/966539954915" target="_blank" rel="noreferrer" className="inline-flex items-center gap-1.5 rounded-full bg-[#25D366] px-4 py-2 text-xs font-black text-white shadow-md transition hover:bg-[#20ba5a]">
             <MessageCircle size={15} /> واتساب
@@ -41,7 +41,7 @@ export default function Navbar({ overlay = false }: { overlay?: boolean }) {
             <div className="my-2 grid grid-cols-2 gap-1 border-y border-[#e3ddd0] py-2">{categories.map((category) => <Link key={category.slug} href={`/projects/${category.slug}`} onClick={() => setMenuOpen(false)} className="rounded-lg px-3 py-2 text-xs text-[#5e6355] hover:bg-[#ede8dc]">{category.title}</Link>)}</div>
             <div className="mt-3 flex flex-col gap-2">
               <a href="tel:+966539954915" className="flex items-center justify-center gap-2 rounded-full bg-[#1b2e23] px-4 py-3 text-center text-sm font-black text-white shadow-sm">
-                <Phone size={16} className="text-[#d49b53]" /> اتصال: 0539954915
+                <Phone size={16} className="text-[#d49b53]" /> <span>اتصال مباشر</span>
               </a>
               <a href="https://wa.me/966539954915" target="_blank" rel="noreferrer" className="flex items-center justify-center gap-2 rounded-full bg-[#25D366] px-4 py-3 text-center text-sm font-black text-white shadow-md">
                 <MessageCircle size={17} /> تواصل عبر واتساب

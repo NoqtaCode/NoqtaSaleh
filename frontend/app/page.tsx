@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, ArrowUpLeft, MoveUpLeft, Phone, MessageCircle } from "lucide-react";
+import { ArrowLeft, ArrowUpLeft, MoveUpLeft } from "lucide-react";
 import SiteNavbar from "../components/layout/SiteNavbar";
 import Footer from "../components/layout/Footer";
 import { BRAND_NAME, categories, palmVarieties, sanityCategoryValues } from "../lib/brand";
@@ -134,22 +134,10 @@ export default async function Home() {
         </section>
 
         <section className="bg-[#1b2e23] px-5 py-16 text-white sm:px-8 sm:py-24">
-          <div className="site-wrap flex flex-col justify-between gap-8 sm:flex-row sm:items-end">
-            <div>
-              <span className="text-xs font-black tracking-[.16em] text-[#d49b53]">الخطوة التالية</span>
-              <h2 className="mt-3 max-w-3xl text-3xl font-black leading-tight sm:text-5xl">هل لديك أرض تريد أن تبدأ بها؟</h2>
-              <p className="mt-4 text-sm leading-7 text-white/75">تواصل معنا مباشرة عبر الاتصال أو الواتساب ونرتب معك الكميات والأسعار المناسبة فوراً.</p>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              <a href="tel:+966539954915" className="inline-flex min-h-14 items-center justify-center gap-2.5 rounded-full bg-[#d49b53] px-7 text-sm font-black text-[#1b2e23] shadow-lg transition hover:bg-white">
-                <Phone size={18} />
-                <span>اتصال مباشر</span>
-              </a>
-              <a href="https://wa.me/966539954915" target="_blank" rel="noreferrer" className="inline-flex min-h-14 items-center justify-center gap-2.5 rounded-full bg-[#25D366] px-7 text-sm font-black text-white shadow-lg transition hover:bg-[#20ba5a]">
-                <MessageCircle size={18} />
-                <span>واتساب</span>
-              </a>
-            </div>
+          <div className="site-wrap mx-auto max-w-3xl text-center">
+            <span className="text-xs font-black tracking-[.16em] text-[#d49b53]">الخطوة التالية</span>
+            <h2 className="mt-3 text-3xl font-black leading-tight sm:text-5xl">هل لديك أرض تريد أن تبدأ بها؟</h2>
+            <p className="mt-4 text-sm leading-7 text-white/75 sm:text-base">تواصل معنا مباشرة عبر الاتصال أو الواتساب ونرتب معك الكميات والأسعار المناسبة فوراً.</p>
           </div>
         </section>
       </main>

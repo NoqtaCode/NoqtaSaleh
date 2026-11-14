@@ -19,7 +19,7 @@ export default async function FloatingActions() {
           className="flex flex-1 items-center justify-center gap-2 rounded-full bg-[#1b2e23] border border-white/20 py-3 text-xs font-black text-white shadow-md active:scale-95"
         >
           <PhoneCall size={16} className="text-[#d49b53]" />
-          <span>اتصال: 0539954915</span>
+          <span>اتصال مباشر</span>
         </a>
         <a
           href={`https://wa.me/${waNumber}?text=${waMsg}`}
@@ -28,7 +28,7 @@ export default async function FloatingActions() {
           className="flex flex-1 items-center justify-center gap-2 rounded-full bg-[#25D366] py-3 text-xs font-black text-white shadow-md active:scale-95"
         >
           <MessageCircle size={17} />
-          <span>واتساب مباشر</span>
+          <span>واتساب</span>
         </a>
       </div>
 
@@ -42,7 +42,7 @@ export default async function FloatingActions() {
         >
           <PhoneCall size={24} className="text-[#d49b53] md:w-7 md:h-7" />
           <span className="absolute right-full mr-4 hidden whitespace-nowrap rounded-xl bg-[#1b2e23] border border-white/10 px-4 py-2 text-xs font-bold text-white shadow-2xl opacity-0 transition-opacity group-hover:opacity-100 md:block">
-            اتصال مباشر: 0539954915
+            اتصال مباشر
           </span>
         </a>
 
@@ -57,7 +57,7 @@ export default async function FloatingActions() {
           <span className="absolute inset-0 animate-ping rounded-full bg-[#25D366] opacity-30"></span>
           <MessageCircle size={28} className="md:w-8 md:h-8" />
           <span className="absolute right-full mr-4 hidden whitespace-nowrap rounded-xl bg-[#1b2e23] border border-white/10 px-4 py-2 text-xs font-bold text-white shadow-2xl opacity-0 transition-opacity group-hover:opacity-100 md:block">
-            تحدث معنا واتساب (0539954915)
+            واتساب
           </span>
         </a>
       </div>
