@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f7f5ef;
+  --foreground: #1c261e;
+  --ink: #1c261e;
+  --forest: #1b2e23;
+  --olive: #556950;
+  --clay: #b56a45;
+  --sand: #e6dfd0;
+  --cream: #ffffff;
+  --gold: #d49b53;
+  --font-sans: Tahoma, "Noto Sans Arabic", Arial, sans-serif;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: Tahoma, Arial, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+}
+
+* { box-sizing: border-box; }
+html, body { width: 100%; min-height: 100%; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body {
+  min-width: 320px;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: Tahoma, "Noto Sans Arabic", "Noto Naskh Arabic", Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+}
+::selection { background: #1b2e23; color: #ffffff; }
+
+.site-wrap { width: min(1380px, calc(100% - 48px)); margin-inline: auto; }
+.eyebrow { display: inline-flex; align-items: center; gap: 10px; color: #b56a45; font-size: 11px; font-weight: 900; letter-spacing: .13em; }
+.eyebrow::before { content: ""; display: block; width: 24px; height: 1px; background: currentColor; }
+.display-heading { font-size: clamp(2.7rem, 6vw, 6.3rem); font-weight: 900; line-height: 1.13; letter-spacing: -.065em; }
+.display-heading em { color: #b56a45; font-style: normal; }
+.photo-card { position: relative; overflow: hidden; background: #e5ded0; }
+.photo-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s cubic-bezier(.2,.7,.2,1); }
+.photo-card:hover img { transform: scale(1.045); }
+.quiet-link { color: var(--forest); font-weight: 900; text-decoration: underline; text-decoration-color: #b56a4570; text-underline-offset: 5px; }
+
+@media (max-width: 640px) {
+  .site-wrap { width: min(100% - 32px, 1380px); }
+}

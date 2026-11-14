@@ -1,0 +1,57 @@
+import Link from "next/link";
+import { ArrowRight, ImagePlus } from "lucide-react";
+import { uploadImages } from "../../../../actions/gallery";
+import UploadSubmitButton from "../../../../components/admin/UploadSubmitButton";
+import { palmVarieties } from "../../../../lib/brand";
+
+export default async function NewGalleryUpload({ searchParams }: { searchParams: Promise<{ error?: string; variety?: string }> }) {
+  const { error, variety } = await searchParams;
+  return (
+    <div className="max-w-2xl mx-auto px-4 pb-20">
+      <div className="flex items-center gap-4 mb-8 pt-4">
+        <Link href="/admin/gallery" className="bg-white p-3 rounded-xl border border-gray-200">
+          <ArrowRight size={24} />
+        </Link>
+        <h1 className="text-2xl font-bold text-slate-800">رفع صور للمعرض</h1>
+      </div>
+
+      {error && <p role="alert" className="mb-5 rounded-2xl border border-red-200 bg-red-50 px-5 py-4 text-sm font-bold leading-6 text-red-700">{error === 'variety' ? 'اختر صنف نخيل صحيحاً.' : error === 'files' ? 'اختر حتى 10 صور بصيغة صورة صحيحة.' : 'تعذر رفع الصور إلى قاعدة البيانات. تحقق من اتصال Sanity وصلاحية الرفع ثم حاول مرة أخرى.'}</p>}
+
+      <div className="bg-white rounded-3xl shadow-xl p-6 md:p-10 border border-gray-100">
+        <form action={uploadImages} className="space-y-8">
+          
+          {/* اختيار صنف النخيل */}
+          <div>
+            <label className="block text-sm font-black text-slate-700 mb-3">قسم النخيل *</label>
+            <select name="variety" required defaultValue={palmVarieties.some((item) => item.key === variety) ? variety : ""} className="w-full border-2 border-gray-100 rounded-2xl p-4 bg-gray-50/50 text-black outline-none focus:border-blue-500">
+              <option value="" disabled>-- اختر صنف النخيل --</option>
+              {palmVarieties.map((item) => <option key={item.key} value={item.key}>{item.title}</option>)}
+            </select>
+          </div>
+
+          {/* حقل اختيار صور متعددة */}
+          <div>
+            <label className="block text-sm font-black text-slate-700 mb-3">اختيار الصور (يمكنك اختيار أكثر من صورة) *</label>
+            <div className="relative border-2 border-dashed border-gray-200 rounded-3xl p-12 text-center bg-gray-50/30 hover:bg-gray-50 transition">
+              <input 
+                type="file" 
+                name="images" 
+                accept="image/*" 
+                multiple // <--- هذا السطر يسمح باختيار صور كثيرة
+                required 
+                className="absolute inset-0 w-full h-full opacity-0 cursor-pointer" 
+              />
+              <div className="text-gray-400">
+                 <ImagePlus size={48} className="mx-auto mb-4 text-blue-500" />
+                 <p className="font-bold text-slate-700">اضغط هنا واصبعك مطول لاختيار الصور</p>
+                 <p className="text-xs mt-1">يمكنك رفع حتى 10 صور في المرة الواحدة</p>
+              </div>
+            </div>
+          </div>
+
+          <UploadSubmitButton />
+        </form>
+      </div>
+    </div>
+  );
+}
