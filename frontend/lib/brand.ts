@@ -30,6 +30,7 @@ export const palmVarieties = [
   { key: "barhi", title: "نخيل برحي" },
   { key: "saqai", title: "نخيل صقعي" },
   { key: "arabic", title: "جميع أنواع النخيل العربي" },
+  { key: "royal-coconut", title: "النخيل الملوكي والنرجيل" },
 ] as const;
 
 export function getCategory(slug: string) {
