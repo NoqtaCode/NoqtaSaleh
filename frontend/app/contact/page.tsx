@@ -25,7 +25,7 @@ async function ContactContent({ settingsPromise }: { settingsPromise: ReturnType
   const whatsapp = (settings.whatsapp || CONTACT.whatsapp).replace(/\D/g, "");
   const email = settings.email || CONTACT.email;
   return (
-    <div className="min-h-screen bg-[#f7f5ef] text-[#1c261e]" dir="rtl">
+    <div className="min-h-screen bg-[#f3f6f3] text-[#1c261e]" dir="rtl">
       <SiteNavbar />
       <main className="site-wrap pb-24 pt-32 sm:pt-40">
         <section className="grid overflow-hidden rounded-[2rem] bg-[#1b2e23] text-white shadow-xl lg:grid-cols-[1fr_.85fr]">
@@ -59,19 +59,19 @@ async function ContactContent({ settingsPromise }: { settingsPromise: ReturnType
                 </a>
               )}
               {phone && (
-                <a href={`tel:${phone}`} className="flex items-center gap-4 rounded-2xl bg-[#faf8f4] border border-[#e3ddd0] p-4 transition hover:bg-[#f0ebe0]">
-                  <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#b56a45] text-white"><Phone size={18} /></span>
-                  <span><span className="block text-xs font-bold text-[#77796d]">اتصال مباشر</span><span className="mt-1 block font-black" dir="ltr">{phoneDisplay}</span></span>
-                  <ArrowUpLeft size={16} className="mr-auto text-[#b56a45]" />
+                <a href={`tel:${phone}`} className="flex items-center gap-4 rounded-2xl bg-[#f4f7f4] border border-[#d5e2d5] p-4 transition hover:bg-[#ebf2eb]">
+                  <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#1b2e23] text-white"><Phone size={18} /></span>
+                  <span><span className="block text-xs font-bold text-[#556950]">اتصال مباشر</span><span className="mt-1 block font-black" dir="ltr">{phoneDisplay}</span></span>
+                  <ArrowUpLeft size={16} className="mr-auto text-[#2d6a4f]" />
                 </a>
               )}
               {email && (
-                <a href={`mailto:${email}`} className="flex items-center gap-4 rounded-2xl bg-[#faf8f4] border border-[#e3ddd0] p-4 transition hover:bg-[#f0ebe0]">
+                <a href={`mailto:${email}`} className="flex items-center gap-4 rounded-2xl bg-[#f4f7f4] border border-[#d5e2d5] p-4 transition hover:bg-[#ebf2eb]">
                   <span className="flex h-11 w-11 items-center justify-center rounded-full bg-[#1b2e23] text-white"><Mail size={18} /></span>
-                  <span><span className="block text-xs font-bold text-[#77796d]">البريد الإلكتروني</span><span className="mt-1 block break-all font-black">{email}</span></span>
+                  <span><span className="block text-xs font-bold text-[#556950]">البريد الإلكتروني</span><span className="mt-1 block break-all font-black">{email}</span></span>
                 </a>
               )}
-              {!phone && !email && !whatsapp && <p className="mt-7 rounded-2xl bg-[#faf8f4] p-4 text-sm leading-7 text-[#676a5e]">لا تتوفر بيانات تواصل حالياً.</p>}
+              {!phone && !email && !whatsapp && <p className="mt-7 rounded-2xl bg-[#f4f7f4] p-4 text-sm leading-7 text-[#676a5e]">لا تتوفر بيانات تواصل حالياً.</p>}
             </div>
           </div>
         </section>

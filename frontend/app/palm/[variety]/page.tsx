@@ -45,7 +45,7 @@ export default async function PalmVarietyPage(props: { params: Promise<{ variety
   );
 
   return (
-    <div className="min-h-screen bg-[#f7f5ef] text-[#1c261e]" dir="rtl">
+    <div className="min-h-screen bg-[#f3f6f3] text-[#1c261e]" dir="rtl">
       <SiteNavbar />
       <main className="pb-24 pt-28 sm:pt-36">
         <section className="site-wrap">
@@ -70,12 +70,12 @@ export default async function PalmVarietyPage(props: { params: Promise<{ variety
 
           {/* الصور */}
           {images.length > 0 ? (
-            <div className="rounded-[1.75rem] border border-[#e3ddd0] bg-white p-4 shadow-sm sm:p-7">
+            <div className="rounded-[1.75rem] border border-[#d5e2d5] bg-white p-4 shadow-sm sm:p-7">
               <CategoryGallery images={images} categoryTitle={variety.title} />
             </div>
           ) : (
-            <div className="rounded-[1.75rem] border border-dashed border-[#ded8cb] bg-white px-6 py-20 text-center shadow-sm sm:py-28">
-              <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#f3efe4] text-[#b56a45]">
+            <div className="rounded-[1.75rem] border border-dashed border-[#d5e2d5] bg-white px-6 py-20 text-center shadow-sm sm:py-28">
+              <span className="mx-auto flex h-14 w-14 items-center justify-center rounded-full bg-[#e2ebe2] text-[#2d6a4f]">
                 <Images size={23} />
               </span>
               <h2 className="mt-5 text-xl font-black text-[#1c261e]">لا توجد صور مضافة لهذا الصنف حالياً</h2>
@@ -85,7 +85,7 @@ export default async function PalmVarietyPage(props: { params: Promise<{ variety
               <div className="mt-6 flex flex-wrap justify-center gap-2">
                 <Link
                   href="/contact"
-                  className="rounded-full bg-[#1b2e23] px-6 py-2.5 text-xs font-black text-white shadow-sm transition hover:bg-[#b56a45]"
+                  className="rounded-full bg-[#1b2e23] px-6 py-2.5 text-xs font-black text-white shadow-sm transition hover:bg-[#2d6a4f]"
                 >
                   استفسر عن {variety.title}
                 </Link>
@@ -101,7 +101,7 @@ export default async function PalmVarietyPage(props: { params: Promise<{ variety
                 <Link
                   key={v.key}
                   href={`/palm/${v.key}`}
-                  className="rounded-full border border-[#ded8cb] bg-white px-5 py-2 text-xs font-bold text-[#1c261e] shadow-sm transition hover:border-[#b56a45] hover:text-[#b56a45]"
+                  className="rounded-full border border-[#d5e2d5] bg-white px-5 py-2 text-xs font-bold text-[#1c261e] shadow-sm transition hover:border-[#2d6a4f] hover:text-[#2d6a4f]"
                 >
                   {v.title}
                 </Link>
@@ -109,7 +109,7 @@ export default async function PalmVarietyPage(props: { params: Promise<{ variety
             </div>
           </div>
 
-          <Link href="/" className="mt-8 inline-flex items-center gap-2 text-sm font-bold text-[#556950] transition hover:text-[#1b2e23]">
+          <Link href="/" className="mt-8 inline-flex items-center gap-2 text-sm font-bold text-[#2d6a4f] transition hover:text-[#1b2e23]">
             <ArrowRight size={17} /> العودة للرئيسية
           </Link>
         </section>

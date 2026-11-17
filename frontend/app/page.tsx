@@ -45,7 +45,7 @@ export default async function Home() {
   const hero = "/images/home/hero-portrait.jpg";
 
   return (
-    <div className="min-h-screen overflow-hidden bg-[#f7f5ef] text-[#1c261e]" dir="rtl">
+    <div className="min-h-screen overflow-hidden bg-[#f3f6f3] text-[#1c261e]" dir="rtl">
       <SiteNavbar overlay />
       <main>
         <section id="home" className="w-full overflow-x-hidden bg-[#1b2820]">
@@ -70,15 +70,15 @@ export default async function Home() {
         </section>
 
         <section className="site-wrap py-16 sm:py-24">
-          <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between"><div><span className="eyebrow">خيارات تناسب موقعك</span><h2 className="mt-3 text-3xl font-black sm:text-4xl text-[#1b2e23]">أنواع النخيل المتوفرة لدينا</h2></div><p className="max-w-lg text-sm leading-7 text-[#676a5e]">اختر الصنف الذي يناسب احتياجك، ثم تواصل معنا لمعرفة التوفر والكميات.</p></div>
-          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">{palmVarieties.map(({ key, title }) => <article key={key} className="group overflow-hidden rounded-2xl border border-[#e3ddd0] bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#b56a45] hover:shadow-xl"><Link href={`/palm/${key}`} className="block"><div className="photo-card relative aspect-[4/3] bg-[#ede8dc]">{varietyPhotoMap[key] ? <Image src={varietyPhotoMap[key]} alt={title} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw" className="object-cover transition duration-700 group-hover:scale-105" /> : <div className="flex h-full items-center justify-center bg-gradient-to-br from-[#e5dfd1] to-[#d5c8a8]"><span className="text-5xl text-[#1b2e23]">♧</span></div>}</div><div className="flex items-center justify-between gap-2 p-4"><h3 className="text-sm font-black text-[#1b2e23]">{title}</h3><span className="shrink-0 rounded-full bg-[#1b2e23] px-3.5 py-2 text-[10px] font-black text-white transition group-hover:bg-[#b56a45]">استعرض الصور</span></div></Link></article>)}</div>
+          <div className="mb-8 flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between"><div><span className="eyebrow">خيارات تناسب موقعك</span><h2 className="mt-3 text-3xl font-black sm:text-4xl text-[#1b2e23]">أنواع النخيل المتوفرة لدينا</h2></div><p className="max-w-lg text-sm leading-7 text-[#5e6355]">اختر الصنف الذي يناسب احتياجك، ثم تواصل معنا لمعرفة التوفر والكميات.</p></div>
+          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5">{palmVarieties.map(({ key, title }) => <article key={key} className="group overflow-hidden rounded-2xl border border-[#d5e2d5] bg-white shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#2d6a4f] hover:shadow-xl"><Link href={`/palm/${key}`} className="block"><div className="photo-card relative aspect-[4/3] bg-[#e2ebe2]">{varietyPhotoMap[key] ? <Image src={varietyPhotoMap[key]} alt={title} fill sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 20vw" className="object-cover transition duration-700 group-hover:scale-105" /> : <div className="flex h-full items-center justify-center bg-gradient-to-br from-[#dce8dc] to-[#c5dac5]"><span className="text-5xl text-[#1b2e23]">♧</span></div>}</div><div className="flex items-center justify-between gap-2 p-4"><h3 className="text-sm font-black text-[#1b2e23]">{title}</h3><span className="shrink-0 rounded-full bg-[#1b2e23] px-3.5 py-2 text-[10px] font-black text-white transition group-hover:bg-[#2d6a4f]">استعرض الصور</span></div></Link></article>)}</div>
         </section>
 
         <section className="bg-[#1b2e23] py-12 text-[#f8f6f0] sm:py-16"><div className="site-wrap grid grid-cols-2 gap-6 text-center lg:grid-cols-4">{[["+3,500", "نخلة تم توريدها"], ["100%", "نسبة نجاح الغرس"], ["كل المناطق", "توريد لجميع أنحاء المملكة"], ["نقل مجهز", "أسطول نقل مخصص"]].map(([value, label]) => <div key={label} className="py-3"><p className="text-2xl font-black text-[#d49b53] sm:text-4xl">{value}</p><p className="mt-2 text-xs text-white/70 sm:text-sm">{label}</p></div>)}</div></section>
 
-        <section className="site-wrap py-16 sm:py-24"><div className="mb-8"><span className="eyebrow">من المزرعة إلى أرضك</span><h2 className="mt-3 text-3xl font-black sm:text-4xl text-[#1b2e23]">مراحل التوريد والخدمة</h2></div><div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{["اختيار النخيل وفرزه", "التجهيز والتقليع الاحترافي", "النقل المؤمّن", "الغرس والمتابعة"].map((step, index) => <article key={step} className="rounded-2xl border border-[#e3ddd0] bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#b56a45] hover:shadow-lg"><span className="text-xs font-black text-[#b56a45]">المرحلة 0{index + 1}</span><h3 className="mt-4 text-lg font-black text-[#1b2e23]">{step}</h3><div className="mt-5 h-1 w-12 rounded-full bg-[#b56a45]" /></article>)}</div></section>
+        <section className="site-wrap py-16 sm:py-24"><div className="mb-8"><span className="eyebrow">من المزرعة إلى أرضك</span><h2 className="mt-3 text-3xl font-black sm:text-4xl text-[#1b2e23]">مراحل التوريد والخدمة</h2></div><div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">{["اختيار النخيل وفرزه", "التجهيز والتقليع الاحترافي", "النقل المؤمّن", "الغرس والمتابعة"].map((step, index) => <article key={step} className="rounded-2xl border border-[#d5e2d5] bg-white p-6 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-[#2d6a4f] hover:shadow-lg"><span className="text-xs font-black text-[#2d6a4f]">المرحلة 0{index + 1}</span><h3 className="mt-4 text-lg font-black text-[#1b2e23]">{step}</h3><div className="mt-5 h-1 w-12 rounded-full bg-[#2d6a4f]" /></article>)}</div></section>
 
-        <section id="projects" className="bg-[#ede8dc] py-20 sm:py-28">
+        <section id="projects" className="bg-[#e5ede5] py-20 sm:py-28">
           <div className="site-wrap">
             <div className="mb-10 flex flex-col justify-between gap-5 sm:flex-row sm:items-end">
               <div>
@@ -86,16 +86,16 @@ export default async function Home() {
                 <h2 className="mt-4 text-3xl font-black sm:text-5xl text-[#1b2e23]">معرض أعمالنا</h2>
                 <p className="mt-3 max-w-2xl text-sm leading-7 text-[#5e6355]">لقطات حية ومباشرة من مشاريع توريد وغرس النخيل في مختلف المواقع.</p>
               </div>
-              <Link href="/gallery" className="quiet-link inline-flex w-fit items-center gap-2 text-sm font-black text-[#1b2e23] transition hover:text-[#b56a45]">
+              <Link href="/gallery" className="quiet-link inline-flex w-fit items-center gap-2 text-sm font-black text-[#1b2e23] transition hover:text-[#2d6a4f]">
                 مشاهدة كافة الصور <ArrowLeft size={16} />
               </Link>
             </div>
             {galleryPhotos.length > 0 ? (
-              <div className="rounded-[1.75rem] border border-[#d8d1c0] bg-white p-3 shadow-sm sm:p-6">
+              <div className="rounded-[1.75rem] border border-[#cfe0cf] bg-white p-3 shadow-sm sm:p-6">
                 <CategoryGallery images={galleryPhotos} categoryTitle="معرض أعمالنا" />
               </div>
             ) : (
-              <div className="rounded-[1.75rem] border border-dashed border-[#d8d1c0] bg-white px-6 py-16 text-center shadow-sm">
+              <div className="rounded-[1.75rem] border border-dashed border-[#cfe0cf] bg-white px-6 py-16 text-center shadow-sm">
                 <p className="text-base font-black text-[#1b2e23]">معرض الأعمال قيد التحديث</p>
                 <p className="mt-2 text-xs text-[#5e6355]">سيتم عرض الصور الجديدة فور إضافتها من لوحة التحكم</p>
               </div>
@@ -104,12 +104,12 @@ export default async function Home() {
         </section>
 
         <section className="site-wrap pb-20 sm:pb-28">
-          <div className="grid overflow-hidden rounded-[2rem] border border-[#e3ddd0] bg-[#ede8dc] shadow-sm lg:grid-cols-[1fr_1fr]">
+          <div className="grid overflow-hidden rounded-[2rem] border border-[#d5e2d5] bg-[#e5ede5] shadow-sm lg:grid-cols-[1fr_1fr]">
             <div className="flex flex-col justify-center p-7 sm:p-12 lg:p-16">
               <span className="eyebrow">طريقة العمل</span>
-              <h2 className="mt-5 text-3xl font-black leading-tight sm:text-5xl text-[#1b2e23]">فكرة واضحة.<br /><span className="text-[#b56a45]">خطوات مرتبة.</span></h2>
+              <h2 className="mt-5 text-3xl font-black leading-tight sm:text-5xl text-[#1b2e23]">فكرة واضحة.<br /><span className="text-[#2d6a4f]">خطوات مرتبة.</span></h2>
               <p className="mt-5 max-w-xl text-sm leading-8 text-[#5e6355] sm:text-base">نحدد احتياج الموقع، ثم ننسق بين النخيل بما يلائم الأرض وطريقة استخدامها.</p>
-              <Link href="/about" className="quiet-link mt-8 inline-flex w-fit items-center gap-2 text-sm font-black text-[#1b2e23] transition hover:text-[#b56a45]">تعرّف على طريقتنا <ArrowUpLeft size={17} /></Link>
+              <Link href="/about" className="quiet-link mt-8 inline-flex w-fit items-center gap-2 text-sm font-black text-[#1b2e23] transition hover:text-[#2d6a4f]">تعرّف على طريقتنا <ArrowUpLeft size={17} /></Link>
             </div>
             <div className="relative w-full self-center overflow-hidden">
               <Image src="/images/home/hero-main.jpg" alt="خدمات توريد النخيل وزراعتها" width={1920} height={1080} sizes="(max-width: 1024px) 100vw, 50vw" className="block h-auto w-full object-cover" />
@@ -119,16 +119,16 @@ export default async function Home() {
 
         {testimonials.length > 0 && <section className="site-wrap py-12 sm:py-20">
           <div className="mb-8"><span className="eyebrow">آراء العملاء</span><h2 className="mt-4 text-3xl font-black sm:text-4xl text-[#1b2e23]">تجارب من أرض الواقع.</h2></div>
-          <div className="grid gap-4 md:grid-cols-3">{testimonials.map((testimonial) => <article key={testimonial._id} className="rounded-[1.25rem] border border-[#e3ddd0] bg-white p-6 shadow-sm sm:p-8"><p className="text-sm leading-8 text-[#55594d]">“{testimonial.feedback}”</p><p className="mt-6 border-t border-[#e3ddd0] pt-4 text-sm font-black text-[#1b2e23]">{testimonial.clientName}</p></article>)}</div>
+          <div className="grid gap-4 md:grid-cols-3">{testimonials.map((testimonial) => <article key={testimonial._id} className="rounded-[1.25rem] border border-[#d5e2d5] bg-white p-6 shadow-sm sm:p-8"><p className="text-sm leading-8 text-[#55594d]">“{testimonial.feedback}”</p><p className="mt-6 border-t border-[#d5e2d5] pt-4 text-sm font-black text-[#1b2e23]">{testimonial.clientName}</p></article>)}</div>
         </section>}
 
         <section className="site-wrap py-16 sm:py-24">
           <div className="grid gap-8 lg:grid-cols-[.8fr_1.2fr] lg:gap-16">
-            <div><span className="eyebrow">تميز واحترافية</span><h2 className="mt-4 text-3xl font-black leading-tight sm:text-4xl text-[#1b2e23]">لماذا تختارنا؟</h2><p className="mt-4 text-sm leading-8 text-[#676a5e]">نحن متخصصون حصرياً في توريد وزراعة أجود أصناف النخيل العربي والواشنطني بمواصفات عالية ونسب نجاح مضمونة. نوفر لك خدمة متكاملة تشمل الفرز، القلع، النقل بأحدث المعدات، والغرس تحت إشراف زراعي متخصص.</p><Link href="/contact" className="mt-6 inline-flex items-center gap-2 text-sm font-black text-[#1b2e23] transition hover:text-[#b56a45]">تواصل معنا الآن <ArrowUpLeft size={16} /></Link></div>
-            <div><span className="eyebrow">أسئلة شائعة</span><div className="mt-4 divide-y divide-[#e3ddd0] rounded-[1.25rem] border border-[#e3ddd0] bg-white px-5 shadow-sm sm:px-7">
-              <details className="group py-5"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-black"><span>كيف أبدأ بطلب خدمة؟</span><span className="text-xl text-[#b56a45] transition group-open:rotate-45">+</span></summary><p className="mt-3 text-sm leading-7 text-[#676a5e]">تواصل معنا من صفحة التواصل، وحدد أصناف النخيل والكمية وموقع التوريد.</p></details>
-              <details className="group py-5"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-black"><span>ما المعلومات التي تساعد في مناقشة المشروع؟</span><span className="text-xl text-[#b56a45] transition group-open:rotate-45">+</span></summary><p className="mt-3 text-sm leading-7 text-[#676a5e]">نوع الخدمة، مساحة الأرض التقريبية، المدينة، وأي صور أو تفاصيل توضح الاحتياج.</p></details>
-              <details className="group py-5"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-black"><span>هل أستطيع استعراض المشاريع حسب المجال؟</span><span className="text-xl text-[#b56a45] transition group-open:rotate-45">+</span></summary><p className="mt-3 text-sm leading-7 text-[#676a5e]">نعم، اختر النخيل من بطاقات الخدمات لعرض الصور والمشاريع المنشورة في ذلك المجال.</p></details>
+            <div><span className="eyebrow">تميز واحترافية</span><h2 className="mt-4 text-3xl font-black leading-tight sm:text-4xl text-[#1b2e23]">لماذا تختارنا؟</h2><p className="mt-4 text-sm leading-8 text-[#676a5e]">نحن متخصصون حصرياً في توريد وزراعة أجود أصناف النخيل العربي والواشنطني بمواصفات عالية ونسب نجاح مضمونة. نوفر لك خدمة متكاملة تشمل الفرز، القلع، النقل بأحدث المعدات، والغرس تحت إشراف زراعي متخصص.</p><Link href="/contact" className="mt-6 inline-flex items-center gap-2 text-sm font-black text-[#1b2e23] transition hover:text-[#2d6a4f]">تواصل معنا الآن <ArrowUpLeft size={16} /></Link></div>
+            <div><span className="eyebrow">أسئلة شائعة</span><div className="mt-4 divide-y divide-[#d5e2d5] rounded-[1.25rem] border border-[#d5e2d5] bg-white px-5 shadow-sm sm:px-7">
+              <details className="group py-5"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-black"><span>كيف أبدأ بطلب خدمة؟</span><span className="text-xl text-[#2d6a4f] transition group-open:rotate-45">+</span></summary><p className="mt-3 text-sm leading-7 text-[#676a5e]">تواصل معنا من صفحة التواصل، وحدد أصناف النخيل والكمية وموقع التوريد.</p></details>
+              <details className="group py-5"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-black"><span>ما المعلومات التي تساعد في مناقشة المشروع؟</span><span className="text-xl text-[#2d6a4f] transition group-open:rotate-45">+</span></summary><p className="mt-3 text-sm leading-7 text-[#676a5e]">نوع الخدمة، مساحة الأرض التقريبية، المدينة، وأي صور أو تفاصيل توضح الاحتياج.</p></details>
+              <details className="group py-5"><summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-sm font-black"><span>هل أستطيع استعراض المشاريع حسب المجال؟</span><span className="text-xl text-[#2d6a4f] transition group-open:rotate-45">+</span></summary><p className="mt-3 text-sm leading-7 text-[#676a5e]">نعم، اختر النخيل من بطاقات الخدمات لعرض الصور والمشاريع المنشورة في ذلك المجال.</p></details>
             </div></div>
           </div>
         </section>

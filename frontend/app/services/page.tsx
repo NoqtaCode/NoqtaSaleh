@@ -22,22 +22,22 @@ const inclusions = [["اختيار الأنواع", "التوريد", "النق�
 
 export default function ServicesPage() {
   return (
-    <div className="min-h-screen bg-[#f7f5ef] text-[#1c261e]" dir="rtl">
+    <div className="min-h-screen bg-[#f3f6f3] text-[#1c261e]" dir="rtl">
       <SiteNavbar />
       <main className="pb-24 pt-28 sm:pt-36">
-        <section className="site-wrap grid items-end gap-8 border-b border-[#e3ddd0] pb-10 sm:pb-14 lg:grid-cols-[1.1fr_.9fr]">
+        <section className="site-wrap grid items-end gap-8 border-b border-[#d5e2d5] pb-10 sm:pb-14 lg:grid-cols-[1.1fr_.9fr]">
           <div>
             <span className="eyebrow">ما نقدّمه / خدمات النخيل</span>
             <h1 className="mt-5 text-4xl font-black leading-tight tracking-tight sm:text-6xl text-[#1b2e23]">
               عناية متكاملة،<br />
-              <span className="text-[#b56a45]">من الاختيار إلى الغرس.</span>
+              <span className="text-[#2d6a4f]">من الاختيار إلى الغرس.</span>
             </h1>
           </div>
           <div className="max-w-lg lg:mr-auto">
             <p className="text-sm leading-8 text-[#5e6355] sm:text-base sm:leading-9">
               نختار أجود أصناف النخيل بعناية ونرتب توريدها ونقلها بأحدث المعدات وغرسها بما يلائم احتياجك وطبيعة أرضك.
             </p>
-            <Link href="/contact" className="mt-6 inline-flex items-center gap-2 text-sm font-black text-[#1b2e23] transition hover:text-[#b56a45]">
+            <Link href="/contact" className="mt-6 inline-flex items-center gap-2 text-sm font-black text-[#1b2e23] transition hover:text-[#2d6a4f]">
               ناقش احتياجك <ArrowUpLeft size={17} />
             </Link>
           </div>
@@ -47,25 +47,25 @@ export default function ServicesPage() {
           {categories.map((category, index) => {
             const Icon = icons[index];
             return (
-              <article key={category.slug} className="overflow-hidden rounded-[1.75rem] border border-[#e3ddd0] bg-white shadow-sm transition hover:shadow-md">
-                <Link href={`/projects/${category.slug}`} className="group photo-card block h-64 bg-[#ede8dc]">
+              <article key={category.slug} className="overflow-hidden rounded-[1.75rem] border border-[#d5e2d5] bg-white shadow-sm transition hover:shadow-md">
+                <Link href={`/projects/${category.slug}`} className="group photo-card block h-64 bg-[#e2ebe2]">
                   <Image src={category.image} alt={category.imageAlt} fill sizes="(max-width: 768px) 100vw, 50vw" className="object-cover transition duration-700 group-hover:scale-105" />
                   <span className="absolute right-5 top-5 flex h-11 w-11 items-center justify-center rounded-full bg-white/90 text-[#1b2e23] shadow-md"><Icon size={20} /></span>
-                  <span className="absolute bottom-4 left-5 flex h-10 w-10 items-center justify-center rounded-full bg-[#1b2e23] text-white shadow-md transition group-hover:bg-[#b56a45]"><ArrowUpLeft size={16} /></span>
+                  <span className="absolute bottom-4 left-5 flex h-10 w-10 items-center justify-center rounded-full bg-[#1b2e23] text-white shadow-md transition group-hover:bg-[#2d6a4f]"><ArrowUpLeft size={16} /></span>
                 </Link>
                 <div className="p-6 sm:p-8">
-                  <span className="text-[10px] font-black tracking-[.18em] text-[#b56a45]">0{index + 1} / {category.eyebrow}</span>
+                  <span className="text-[10px] font-black tracking-[.18em] text-[#2d6a4f]">0{index + 1} / {category.eyebrow}</span>
                   <h2 className="mt-2 text-2xl font-black text-[#1b2e23]">{category.title}</h2>
                   <p className="mt-3 text-sm leading-7 text-[#5e6355]">{category.description}</p>
-                  <ul className="mt-5 flex flex-wrap gap-2 border-t border-[#e3ddd0] pt-5">
+                  <ul className="mt-5 flex flex-wrap gap-2 border-t border-[#d5e2d5] pt-5">
                     {inclusions[index].map((item) => (
-                      <li key={item} className="inline-flex items-center gap-1.5 rounded-full bg-[#f3efe4] px-3.5 py-1.5 text-xs font-bold text-[#454a3e]">
-                        <Check size={14} className="text-[#b56a45]" />
+                      <li key={item} className="inline-flex items-center gap-1.5 rounded-full bg-[#e2ebe2] px-3.5 py-1.5 text-xs font-bold text-[#2d4f3b]">
+                        <Check size={14} className="text-[#2d6a4f]" />
                         {item}
                       </li>
                     ))}
                   </ul>
-                  <Link href={`/contact?service=${category.slug}`} className="mt-6 inline-flex items-center gap-2 rounded-xl bg-[#1b2e23] px-5 py-2.5 text-xs font-black text-white transition hover:bg-[#b56a45]">
+                  <Link href={`/contact?service=${category.slug}`} className="mt-6 inline-flex items-center gap-2 rounded-xl bg-[#1b2e23] px-5 py-2.5 text-xs font-black text-white transition hover:bg-[#2d6a4f]">
                     اطلب هذه الخدمة <ArrowUpLeft size={15} />
                   </Link>
                 </div>

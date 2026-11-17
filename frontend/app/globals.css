@@ -1,13 +1,13 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f7f5ef;
-  --foreground: #1c261e;
-  --ink: #1c261e;
+  --background: #f3f6f3;
+  --foreground: #142017;
+  --ink: #142017;
   --forest: #1b2e23;
-  --olive: #556950;
-  --clay: #b56a45;
-  --sand: #e6dfd0;
+  --olive: #2d6a4f;
+  --clay: #2d6a4f;
+  --sand: #dce7dc;
   --cream: #ffffff;
   --gold: #d49b53;
   --font-sans: Tahoma, "Noto Sans Arabic", Arial, sans-serif;
@@ -33,14 +33,14 @@ body {
 ::selection { background: #1b2e23; color: #ffffff; }
 
 .site-wrap { width: min(1380px, calc(100% - 48px)); margin-inline: auto; }
-.eyebrow { display: inline-flex; align-items: center; gap: 10px; color: #b56a45; font-size: 11px; font-weight: 900; letter-spacing: .13em; }
+.eyebrow { display: inline-flex; align-items: center; gap: 10px; color: #2d6a4f; font-size: 11px; font-weight: 900; letter-spacing: .13em; }
 .eyebrow::before { content: ""; display: block; width: 24px; height: 1px; background: currentColor; }
 .display-heading { font-size: clamp(2.7rem, 6vw, 6.3rem); font-weight: 900; line-height: 1.13; letter-spacing: -.065em; }
-.display-heading em { color: #b56a45; font-style: normal; }
-.photo-card { position: relative; overflow: hidden; background: #e5ded0; }
+.display-heading em { color: #2d6a4f; font-style: normal; }
+.photo-card { position: relative; overflow: hidden; background: #e2ebe2; }
 .photo-card img { width: 100%; height: 100%; object-fit: cover; transition: transform .8s cubic-bezier(.2,.7,.2,1); }
 .photo-card:hover img { transform: scale(1.045); }
-.quiet-link { color: var(--forest); font-weight: 900; text-decoration: underline; text-decoration-color: #b56a4570; text-underline-offset: 5px; }
+.quiet-link { color: var(--forest); font-weight: 900; text-decoration: underline; text-decoration-color: #2d6a4f60; text-underline-offset: 5px; }
 
 @media (max-width: 640px) {
   .site-wrap { width: min(100% - 32px, 1380px); }
